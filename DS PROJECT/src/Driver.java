@@ -49,7 +49,32 @@ public class Driver {
 				
 						
 			if(mainOpt == 2) {
-				
+				int visitorOpt = 0;
+				do {
+					System.out.println("\t\t\t Visitor Menu");
+					System.out.println("\n ");
+					System.out.println("\t 1. View Jamaican Creole Phrases");
+					System.out.println("\t 2. View Places");
+					System.out.println("\t 3. View Attractions");
+					System.out.println("\t 4. Exit");
+					String opt2 = JOptionPane.showInputDialog("Select an option:  ");
+				    visitorOpt = Integer.parseInt(opt2);
+					
+					if (visitorOpt == 1) {
+						Visitor visitor = new Visitor();
+						visitor.viewPhrases();
+					}
+					
+					if (visitorOpt == 2) {
+						Visitor visitor = new Visitor();
+						visitor.searchPlace();
+					}
+					
+					if (visitorOpt == 3) {
+						Visitor visitor = new Visitor();
+						visitor.requestCheapest();
+					}
+				} while (visitorOpt != 4);
 			}
 			
 			if(mainOpt == 3) {

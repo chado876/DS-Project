@@ -41,7 +41,7 @@ public class Admin {
 	place.setOpenhours(openh);
 	
 	String Cost = JOptionPane.showInputDialog("Enter the cost of entry of the place: ");
-	float cost = Float.parseFloat(Cost);
+	int cost = Integer.parseInt(Cost);
 	place.setCost(cost);
 	
 	String cnum = JOptionPane.showInputDialog("Enter the contact number of the place: ");
@@ -86,15 +86,22 @@ public class Admin {
 			while(fileObj.hasNext()) {
 				place.id = fileObj.nextInt();
 				place.name = fileObj.next();
-				//do above for other place attributes. It must be in the order in which it was stored (check storeplace for order)
+				place.description = fileObj.next();
+				place.address = fileObj.next();
+				place.pcode = fileObj.nextInt();
+				place.photolink = fileObj.next();
+				place.mainattr = fileObj.next();
+				place.openhours = fileObj.next();
+				place.cost = fileObj.nextInt();
+				place.contactnum = fileObj.next();
 				
-				//do this below but for place with place attributes
-				//System.out.println(staff.ID + "\t" + staff.password + "\t" + staff.name + "\t" + staff.dob.Day + "\t" + staff.dob.Month + "\t" + staff.dob.Year + "\t" + staff.doe.Day + "\t" + staff.doe.Month + "\t" + staff.doe.Year );
+				place.Display();
+				//System.out.println(place.id + "\t" + place.name + "\t" + place.description + "\t" + place.address + "\t" + place.pcode + "\t" + place.photolink + "\t" + place.mainattr + "\t" + place.openhours + "\t" + place.cost + "\t" + place.contactnum );
 			}
 			fileObj.close();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("File not found");
 		}
 	}
 	

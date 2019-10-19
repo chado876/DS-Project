@@ -1,2 +1,3 @@
-1 UTECH College Papine UT1 utech.com Class 6AM to 10PM 0.0 876 
+1 UTECH College papine 2 utech.com Beaches 10am 100 876332 
+ 1 UWI College Mona 2 uwi.cok class 10am 0 876 
  

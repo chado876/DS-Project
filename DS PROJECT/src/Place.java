@@ -1,8 +1,8 @@
 
 public class Place {
-		public int id,pcode;
+		 int id,pcode;
 		String name,description,address,photolink,mainattr,openhours,contactnum;
-		float cost;
+		int cost;
 		
 		public Place() {
 			super();
@@ -19,7 +19,7 @@ public class Place {
 		}
 		
 		public Place(int id, String openhours, String contactnum, String name, String description, String address,
-				int pcode, String photolink, String mainattr, float cost) {
+				int pcode, String photolink, String mainattr, int cost) {
 			super();
 			this.id = id;
 			this.openhours = openhours;
@@ -86,10 +86,10 @@ public class Place {
 		public void setMainattr(String mainattr) {
 			this.mainattr = mainattr;
 		}
-		public float getCost() {
+		public int getCost() {
 			return cost;
 		}
-		public void setCost(float cost) {
+		public void setCost(int cost) {
 			this.cost = cost;
 		}
 
